@@ -2608,21 +2608,21 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 			},
 			"new_mouduan":{
 				trigger:{
-					player:"phaseJieshuBegin",
+					player:"phaseDiscardBegin",
 				},
 				//priority:2,
 				audio:"botu",
-				filter:function (event,player){
-					var history=player.getHistory('useCard');
-					var suits=[];
-					var types=[];
-					for(var i=0;i<history.length;i++){
-						var suit=get.suit(history[i].card);
-						if(suit) suits.add(suit);
-						types.add(get.type(history[i].card))
-					}
-					return suits.length>=4||types.length>=3;
-				},
+				// filter:function (event,player){
+				// 	var history=player.getHistory('useCard');
+				// 	var suits=[];
+				// 	var types=[];
+				// 	for(var i=0;i<history.length;i++){
+				// 		var suit=get.suit(history[i].card);
+				// 		if(suit) suits.add(suit);
+				// 		types.add(get.type(history[i].card))
+				// 	}
+				// 	return suits.length>=4||types.length>=3;
+				// },
 				check:function(event,player){
 					return player.canMoveCard(true);
 				},
@@ -7553,7 +7553,8 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 			"keji_add":"克己",
 			"keji_add_info":"",
 			"new_mouduan":"谋断",
-			"new_mouduan_info":"结束阶段，若你于本回合内使用过四种花色或三种类别的牌，则你可以移动场上的一张牌。",
+			"new_mouduan_info":"弃牌阶段开始时，你可以移动场上的一张牌。",
+			// "new_mouduan_info":"结束阶段，若你于本回合内使用过四种花色或三种类别的牌，则你可以移动场上的一张牌。",
 			"new_longdan":"龙胆",
 			"new_longdan_info":"你可以将【杀】当【闪】，【闪】当【杀】使用或打出。当你发动〖龙胆〗使用的【杀】被【闪】抵消时，你可以对另一名角色造成1点伤害；当你发动〖龙胆〗使用的【闪】抵消了【杀】时，你可以令一名其他角色回复1点体力（不能是【杀】的使用者）。",
 			"fz_new_longdan":"龙胆",
