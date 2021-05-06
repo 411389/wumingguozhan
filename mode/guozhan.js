@@ -2623,7 +2623,7 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 				// 	}
 				// 	return suits.length>=4||types.length>=3;
 				// },
-				check:function(event,player){
+				filter:function(event,player){
 					return player.canMoveCard(true)&&player.countCards('h')>player.hp;
 				},
 				content:function (){
