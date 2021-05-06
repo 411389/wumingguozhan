@@ -10178,6 +10178,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 				}
 			},
 			jueqing:{
+				equipSkill:true,
 				trigger:{source:'damageBefore'},
 				forced:true,
 				audio:2,

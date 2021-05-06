@@ -7861,7 +7861,7 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 			['heart',12,'sha'],
 			['heart',12,'guohe'],
 			['heart',13,'shan'],
-			['heart',13,'zhuahuang'],
+			['heart',13,'xiwen'],//zhuahuang
 
 			/*['spade',1,'xietianzi',null,['lianheng']],
 			['spade',2,'minguangkai'],

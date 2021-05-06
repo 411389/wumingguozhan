@@ -154,6 +154,12 @@ game.import('card',function(lib,game,ui,get,ai,_status){
 					equipValue:9
 				}
 			},
+			xiwen:{
+				mode:['guozhan'],
+				type:'equip',
+				subtype:'equip5',
+				skills:['jueqing'],
+			},
 			xietianzi:{
 				audio:true,
 				fullskin:true,
@@ -1379,6 +1385,8 @@ game.import('card',function(lib,game,ui,get,ai,_status){
 			yuxi:'玉玺',
 			yuxi_info:'若你明置势力，可装备此牌，视为拥有技能〖庸肆〗',
 			// yuxi_info:'锁定技，若你有明置的武将牌，你的势力视为唯一的大势力；锁定技，摸牌阶段，若你有明置的武将牌，你多摸一张牌；锁定技，出牌阶段开始时，若你有明置的武将牌，你视为使用【知己知彼】',
+			xiwen:'檄文',
+			xiwen_info:'装备此牌，视为拥有技能〖绝情〗',
 			xietianzi:'挟令',
 			xietianzi_info:'出牌阶段，对自己使用。你结束出牌阶段，若如此做，弃牌阶段结束时，你可以弃置一张手牌，获得一个额外的回合',
 			xietianzi_info_guozhan:'出牌阶段，对为大势力角色的你使用。你结束出牌阶段，若如此做，弃牌阶段结束时，你可以弃置一张手牌，获得一个额外的回合',
@@ -1449,7 +1457,8 @@ game.import('card',function(lib,game,ui,get,ai,_status){
 			['spade',1,'xietianzi'],
 			['diamond',1,'xietianzi'],
 			['diamond',4,'xietianzi'],
-			['club',1,'yuxi'],
+			['diamond',13,'yuxi'],
+			// ['club',1,'yuxi'],
 		],
 	}
 });
