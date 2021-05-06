@@ -4666,7 +4666,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 				},
 				viewAs:{name:'jiu'},
 				viewAsFilter:function(player){
-					if(!player.countCards('h',{suit:'spade'})) return false;
+					if(!player.countCards('h',{name:'tao'})) return false;
 				},
 				prompt:'将一张桃当酒使用',
 				check:function(card){
@@ -4675,7 +4675,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 				},
 				ai:{
 					skillTagFilter:function(player){
-						return player.countCards('h',{suit:'spade'})>0&&player.hp<=0;
+						return player.countCards('h',{name:'tao'})>0&&player.hp<=0;
 					},
 					threaten:1.5,
 					save:true,
