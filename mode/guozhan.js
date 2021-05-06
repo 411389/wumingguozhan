@@ -6137,8 +6137,8 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 					return event.name=='addJudge'||(event.card.name!='chiling'&&get.effect(event.target,event.card,event.player,player)<0);
 				},
 				filter:function(event,player){
-					if(get.color(event.card)=='red') return 0;
-					if(get.type(event.card)=='trick'||event.card.name=='lebu'||event.card.name=='bingliang'||event.card.name=='shandian') return 1;
+					if(get.color(event.card)=='black')
+						if(get.type(event.card)=='trick'||event.card.name=='lebu'||event.card.name=='bingliang'||event.card.name=='shandian') return 1;
 					return 0;
 				},
 				content:function(){
