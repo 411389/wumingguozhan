@@ -5967,7 +5967,7 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 				equipSkill:true,
 				trigger:{global:'phaseUseBegin'},
 				filter:function(event,player){
-					return player.canCompare(trigger.player);
+					return player.canCompare(event.player);
 				},
 				content:function(){
 					"step 0"												
