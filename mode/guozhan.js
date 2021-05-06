@@ -2624,7 +2624,10 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 				// 	return suits.length>=4||types.length>=3;
 				// },
 				filter:function(event,player){
-					return player.canMoveCard(true)&&player.countCards('h')>player.hp;
+					return player.countCards('h')>player.hp;
+				},
+				check:function(event,player){
+					return player.canMoveCard(true);
 				},
 				content:function (){
 					player.moveCard();
