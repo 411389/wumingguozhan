@@ -7832,7 +7832,7 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 			['diamond',12,'sanjian'],
 			['diamond',12,'wuxie',null,['guo']],
 			['diamond',13,'shan'],
-			['diamond',13,'zixin'],
+			['diamond',13,'yuxi'],//zixin
 
 			['heart',1,'taoyuan'],
 			['heart',1,'wanjian'],

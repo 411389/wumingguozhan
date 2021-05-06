@@ -12126,13 +12126,14 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 					threaten:0.8
 				}
 			},
-			yongsi:{
+			yongsi:{				
 				group:['yongsi1','yongsi2'],
 				ai:{
 					threaten:2.2
 				}
 			},
 			yongsi1:{
+				equipSkill:true,
 				audio:2,
 				trigger:{player:'phaseDrawBegin2'},
 				forced:true,
@@ -12140,15 +12141,16 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 					return !event.numFixed;
 				},
 				content:function(){
-					trigger.num+=game.countGroup()+get.population('ye');
+					trigger.num+=(get.population('wei')>0)+(get.population('shu')>0)+(get.population('wu')>0)+(get.population('qun')>0)+get.population('ye');
 				}
 			},
 			yongsi2:{
+				equipSkill:true,
 				audio:2,
 				trigger:{player:'phaseDiscardBegin'},
 				forced:true,
 				content:function(){
-					player.chooseToDiscard(game.countGroup()+get.population('ye'),'he',true);
+					player.chooseToDiscard((get.population('wei')>0)+(get.population('shu')>0)+(get.population('wu')>0)+(get.population('qun')>0)+get.population('ye'),'he',true);
 				}
 			},
 			bifa:{
