@@ -442,7 +442,7 @@ game.import('card',function(lib,game,ui,get,ai,_status){
 				fullskin:true,
 				type:'equip',
 				subtype:'equip5',
-				distance:{attackFrom:-2},
+				// distance:{attackFrom:-2},
 				ai:{
 					equipValue:function(card,player){
 						return Math.min(2.5+player.countCards('h','sha'),4);
@@ -490,7 +490,7 @@ game.import('card',function(lib,game,ui,get,ai,_status){
 				fullskin:true,
 				type:'equip',
 				subtype:'equip5',
-				distance:{attackFrom:-3},
+				// distance:{attackFrom:-3},
 				ai:{
 					basic:{
 						equipValue:2.5
@@ -2289,12 +2289,12 @@ game.import('card',function(lib,game,ui,get,ai,_status){
 			zhuge_bg:'弩',
 			cixiong_bg:'双',
 			qinggang:'青釭剑',
-			qinglong:'青龙偃月刀',
+			qinglong:'酒令',//青龙偃月刀
 			zhangba:'丈八蛇矛',
 			qinglong_bg:'偃',
 			zhangba_bg:'蛇',
 			guanshi:'贯石斧',
-			fangtian:'方天画戟',
+			fangtian:'战书',//方天画戟
 			qilin:'麒麟弓',
 			qilin_bg:'弓',
 			zhuge_skill:'诸葛连弩',

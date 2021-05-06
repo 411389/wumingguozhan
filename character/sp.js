@@ -11463,7 +11463,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 					"step 1"
 					if(player.isDamaged()){
 						if(get.mode()=='guozhan'){
-							if(player.isMinor()||player.identity=='ye'){
+							if(player.isMinor()||player.identity=='ye'||get.population(player.identity)==1){
 								player.recover();
 							}
 						}
