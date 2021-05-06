@@ -5815,7 +5815,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 				content:function(){
 					"step 0"
 					var check=player.needsToDiscard()||player.isTurnedOver()||(player.hasSkill('shebian')&&player.canMoveCard(true,true));
-					player.chooseTarget(get.prompt('shensu'),"跳过弃牌阶段，失去一点体力并将武将牌翻面，视为对一名其他角色使用一张【杀】",function(card,player,target){
+					player.chooseTarget(get.prompt('shensu'),"跳过弃牌阶段并失去一点体力，视为对一名其他角色使用一张【杀】",function(card,player,target){
 						if(player==target) return false;
 						return player.canUse({name:'sha'},target,false);
 					}).set('check',check).set('ai',function(target){
@@ -5826,7 +5826,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 					if(result.bool){
 						player.logSkill('shensu4',result.targets);
 						player.loseHp();
-						player.turnOver();
+						// player.turnOver();
 						player.useCard({name:'sha',isCard:true},result.targets[0],false);
 						trigger.cancel();
 					}
@@ -7230,7 +7230,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 			xintianxiang_bg:'香',
 			xintianxiang_info:'当你受到伤害时，你可以弃置一张♥牌，将此伤害转移给一名其他角色，然后你选择一项：令该角色摸X张牌（X为其已损失的体力值）；或防止其造成与受到的所有伤害，且此技能失效直到你的下回合开始',
 			xinshensu:'神速',
-			xinshensu_info:'你可以选择一至三项：1. 跳过判定阶段和摸牌阶段；2. 跳过出牌阶段并弃置一张装备牌；3. 跳过弃牌阶段，失去一点体力并将你的武将牌翻面。你每选择一项，视为你对一名其他角色使用一张没有距离限制的【杀】',
+			xinshensu_info:'你可以选择一至三项：1. 跳过判定阶段和摸牌阶段；2. 跳过出牌阶段并弃置一张装备牌；3. 跳过弃牌阶段并失去一点体力。你每选择一项，视为你对一名其他角色使用一张没有距离限制的【杀】',
 			yinghun:'英魂',
 			yinghun_info:'准备阶段开始时，若你已受伤，你可令一名其他角色执行一项：摸X张牌，然后弃置一张牌；或摸一张牌，然后弃置X张牌（X为你已损失的体力值，若你装备区里牌的数量不小于你的体力值，则X改为你的体力上限）',
 			gzyinghun:'英魂',
