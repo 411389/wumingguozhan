@@ -410,7 +410,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 					return !event.numFixed&&event.num>0;
 				},
 				content:function(){
-					player.addTempSkill('luoyi2','phaseJieshuBegin');
+					player.addTempSkill('luoyi2',{player:'phaseBefore'});
 					trigger.num--;
 				}
 			},
@@ -2762,7 +2762,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 			pileBottom:'牌堆底',
 			ganglie_info:'当你受到伤害后，你可以进行判定。若结果不为红桃，则伤害来源须弃置两张手牌，否则受到来自你的一点伤害。',
 			tuxi_info:'摸牌阶段，你可以改为获得至多两名其他角色的各一张手牌。',
-			luoyi_info:'摸牌阶段，你可以少摸一张牌。若如此做，当你本回合内使用【杀】或【决斗】造成伤害时，此伤害+1。',
+			luoyi_info:'摸牌阶段，你可以少摸一张牌。若如此做，直到你的下回合开始，你为伤害来源的【杀】或【决斗】造成伤害时，此伤害+1。',
 			tiandu_info:'当你的判定牌生效后，你可以获得之。',
 			yiji_info:'当你受到一点伤害后，你可以观看牌堆顶的两张牌，然后将其分配给任意角色。',
 			luoshen_info:'准备阶段，你可以进行判定。若结果为黑色，你获得判定牌。你可重复此流程，直到出现红色的判定结果。',

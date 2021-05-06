@@ -441,7 +441,7 @@ game.import('card',function(lib,game,ui,get,ai,_status){
 			qinglong:{
 				fullskin:true,
 				type:'equip',
-				subtype:'equip1',
+				subtype:'equip5',
 				distance:{attackFrom:-2},
 				ai:{
 					equipValue:function(card,player){
@@ -451,7 +451,7 @@ game.import('card',function(lib,game,ui,get,ai,_status){
 						equipValue:3.5
 					}
 				},
-				skills:['qinglong_skill']
+				skills:['jiuchi']
 				//skills:['qinglong_skill','qinglong_guozhan']
 			},
 			zhangba:{
@@ -489,14 +489,14 @@ game.import('card',function(lib,game,ui,get,ai,_status){
 			fangtian:{
 				fullskin:true,
 				type:'equip',
-				subtype:'equip1',
+				subtype:'equip5',
 				distance:{attackFrom:-3},
 				ai:{
 					basic:{
 						equipValue:2.5
 					}
 				},
-				skills:['fangtian_skill']//,'fangtian_guozhan']
+				skills:['gzzhiba']//,'fangtian_guozhan']
 			},
 			qilin:{
 				fullskin:true,

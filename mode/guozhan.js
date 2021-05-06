@@ -5963,34 +5963,31 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 					return player.hp<=1&&player.isDamaged()&&!player.hasSkill('gzyinghun');
 				}
 			},
-			gzzhiba:{				
-				enable:'phaseUse',
-				usable:1,
-				mainSkill:1,
-				init:function(player){
-					player.checkMainSkill('gzzhiba');
-				},
-				filterTarget:function(card,player,target){
-					return player.canCompare(target)&&target.isUnseen(0)&&target.isUnseen(1);
-				},
+			gzzhiba:{
+				equipSkill:true,
+				trigger:{global:'phaseUseBegin'},
 				filter:function(event,player){
-					return player.countCards('h')>0;
+					return player.canCompare(trigger.player);
 				},
 				content:function(){
-					"step 0"
-					player.draw();
-					target.draw();													
-					player.chooseToCompare(target);	
+					"step 0"												
+					player.chooseToCompare(trigger.player);	
 					"step 1"
 					if(result.bool){
-						player.viewCharacter(target,2);						
+						player.useCard({name:'juedou',isCard:true},trigger.player,'noai').animate=false;
+						// player.viewCharacter(target,2);						
 					}
 					else{
-						player.showHandcards();
+						trigger.player.useCard({name:'juedou',isCard:true},player,'noai').animate=false;
+						// player.showHandcards();
 					}				
 				}
 			},
 			yingyang:{
+				mainSkill:1,
+				init:function(player){
+					player.checkMainSkill('yingyang');
+				},
 				direct:1,
 				trigger:{player:'compare',target:'compare'},
 				filter:function(event){
@@ -7680,9 +7677,9 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 			baoling:'暴凌',
 			baoling_info:'主将技，锁定技，出牌阶段结束时，若你有副将，则你移除副将，然后加3点体力上限，回复3点体力，失去技能〖暴凌〗并获得〖崩坏〗',
 			gzzhiba:'制霸',
-			gzzhiba_info:'主将技，出牌阶段限一次，选择一名未确定势力的角色，双方各摸一张牌后拼点。若你赢，你可以观看其所有武将牌；若你没赢，则你展示所有手牌。',
+			gzzhiba_info:'装备此牌，其他角色出牌阶段开始时，你可与其拼点。若你赢，视为你对其使用一张【决斗】；若你没赢，视为其对你使用一张【决斗】。',
 			yingyang:'鹰扬',
-			yingyang_info:'当你的拼点牌亮出后，你可以令此牌的点数+3，至多为K，或点数-3，至少为1，然后双方各摸一张牌。',
+			yingyang_info:'主将技，当你的拼点牌亮出后，你可以令此牌的点数+3，至多为K，或点数-3，至少为1，然后双方各摸一张牌。',
 			hunshang:'魂殇',
 			hunshang_info:'副将技，此武将牌减少半个阴阳鱼；准备阶段，若你的体力值不大于1，则你本回合获得“英姿”和“英魂”',
 			gzguixiu:'闺秀',

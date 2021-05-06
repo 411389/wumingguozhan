@@ -4656,17 +4656,19 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 				}
 			},
 			jiuchi:{
+				equipSkill:true,
 				audio:2,
 				audioname:['re_dongzhuo'],
 				enable:'chooseToUse',
 				filterCard:function(card){
-					return get.suit(card)=='spade';
+					return get.name(card)=='tao';
+					// return get.suit(card)=='spade';
 				},
 				viewAs:{name:'jiu'},
 				viewAsFilter:function(player){
 					if(!player.countCards('h',{suit:'spade'})) return false;
 				},
-				prompt:'将一张黑桃手牌当酒使用',
+				prompt:'将一张桃当酒使用',
 				check:function(card){
 					if(_status.event.type=='dying') return 1;
 					return 4-get.value(card);
@@ -7352,7 +7354,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 			haoshi_info:'摸牌阶段，你可以额外摸两张牌。若此时你的手牌数多于五张，你须将一半(向下取整)的手牌交给场上除你外手牌数最少的一名角色。',
 			dimeng_info:'出牌阶段限一次，你可以选择其他两名角色，你弃置等同于这两名角色手牌数量之差的牌，然后交换他们的手牌。',
 			yinghun_old_info:'准备阶段，若你已受伤，则你可以令一名其他角色执行下列两项中的一项： 1.摸X张牌，然后弃一张牌。 2.摸一张牌，然后弃X张牌。 （X为你已损失的体力值）',
-			jiuchi_info:'你可以将一张♠手牌当作【酒】使用。',
+			jiuchi_info:'装备此牌，你可以将一张【桃】当作【酒】使用。',
 			roulin_info:'锁定技。你对女性角色、女性角色对你使用【杀】时，都需连续使用两张【闪】才能抵消。',
 			benghuai_info:'结束阶段，若你的体力不是全场最少的(或之一)，你须减1点体力或体力上限。',
 			baonue_info:'主公技，其他群雄角色造成伤害后，可进行一次判定，若为♠，你回复1点体力。',
