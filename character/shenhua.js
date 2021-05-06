@@ -7330,7 +7330,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 			duanliang1:'断粮',
 			haoshi:'好施',
 			dimeng:'缔盟',
-			jiuchi:'酒池',
+			jiuchi:'温酒',//酒池
 			roulin:'肉林',
 			benghuai:'崩坏',
 			baonue:'暴虐',
