@@ -4972,7 +4972,7 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 				},
 				content:function(){
 					"step 0"
-					player.chooseToDiscard(2);
+					player.chooseToDiscard(player.countCards('h'));
 					"step 1"
 					if(result.bool==false) player.loseHp();
 				}
@@ -7676,10 +7676,10 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 			fengshi_info:'阵法技，在一个围攻关系中，若你是围攻角色，则你或另一名围攻角色使用【杀】指定被围攻角色为目标后，可令该角色弃置装备区内的一张牌。',
 			gzsuishi:'随势',
 			gzsuishi2:'随势',
-			gzsuishi_info:'锁定技，其他角色进入濒死状态时，若伤害来源与你势力相同，你摸一张牌；其他角色死亡时，若其与你势力相同，你弃置两张手牌或失去1点体力。',
+			gzsuishi_info:'锁定技，其他角色进入濒死状态时，若伤害来源与你势力相同，你摸一张牌；其他角色死亡时，若其与你势力相同，你弃置所有手牌或失去1点体力。',
 			baoling:'暴凌',
 			baoling_info:'主将技，锁定技，出牌阶段结束时，若你有副将，则你移除副将，然后加3点体力上限，回复3点体力，失去技能〖暴凌〗并获得〖崩坏〗',
-			gzzhiba:'制霸',
+			gzzhiba:'射戟',
 			gzzhiba_info:'装备此牌，其他角色出牌阶段开始时，你可与其拼点。若你赢，视为你对其使用一张【决斗】；若你没赢，视为其对你使用一张【决斗】。',
 			yingyang:'鹰扬',
 			yingyang_info:'主将技，当你的拼点牌亮出后，你可以令此牌的点数+3，至多为K，或点数-3，至少为1，然后双方各摸一张牌。',

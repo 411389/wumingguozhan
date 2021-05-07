@@ -1897,6 +1897,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 				}
 			},
 			kurou:{
+				usable:4,
 				audio:2,
 				enable:'phaseUse',
 				prompt:'先摸X张牌，然后失去一点体力，X为当前体力值。',
@@ -2802,7 +2803,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 			xinjiuyuan_info_alter:'主公技，其他吴国角色对自己使用【桃】时，如果他的体力值大于你，他可以选择让你回复1点体力，然后他摸1张牌',
 			qixi_info:'你可以将一张黑色牌当做【过河拆桥】使用。',
 			keji_info:'弃牌阶段开始时，若你于本回合的出牌阶段内没有过使用或打出过【杀】，则你可以跳过此阶段。',
-			kurou_info:'出牌阶段，你可以先摸X张牌，然后失去一点体力，X为当前体力值。',
+			kurou_info:'出牌阶段限四次，，你可以先摸X张牌，然后失去一点体力，X为当前体力值。',
 			yingzi_info:'摸牌阶段，你可以多摸一张牌。',
 			fanjian_info:'出牌阶段限一次，你可以令一名角色选择一种花色并展示你的一张手牌，若选择的花色与展示的不同，该角色受到来自你的一点伤害。然后该角色获得展示的牌。',
 			guose_info:'你可以将一张方片手牌当做【乐不思蜀】使用。',
