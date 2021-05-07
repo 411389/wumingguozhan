@@ -4972,7 +4972,10 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 				},
 				content:function(){
 					"step 0"
-					player.chooseToDiscard(player.countCards('h'));
+					if(player.countCards('h'))
+						player.chooseToDiscard(player.countCards('h'));
+					else
+						player.loseHp();						
 					"step 1"
 					if(result.bool==false) player.loseHp();
 				}
@@ -5968,7 +5971,7 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 			},
 			gzzhiba:{
 				equipSkill:true,
-				trigger:{global:'phaseUseBegin'},
+				trigger:{global:'phaseUseBefore'},
 				filter:function(event,player){
 					return player.canCompare(event.player);
 				},
@@ -7504,7 +7507,7 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 			gzzongyu_info:'当【六龙骖驾】进入其他角色的装备区后，你可以将你装备区内所有坐骑牌（至少一张）与【六龙骖驾】交换位置。锁定技，当你使用坐骑牌后，若场上或弃牌堆中有【六龙骖驾】，则将【六龙骖驾】置入你的装备区。',
 					
 			xindiaodu:"调度",
-			"xindiaodu_info":"若此武将牌明置，当与你势力相同的角色使用装备牌时，其可以摸一张牌；出牌阶段开始时，你可以获得与你势力相同的一名其他角色装备区内的一张牌，然后你可以将此牌交给另一名与你势力相同的其他角色。",
+			"xindiaodu_info":"若此武将牌明置，当与你势力相同的角色使用装备牌时，其可以摸一张牌；出牌阶段开始时，你可以获得与你势力相同的一名其他角色装备区内的一张牌，然后你可以将此牌交给另一名与你势力相同的角色。",
 			yigui:"役鬼",
 			"yigui_info":"当你首次明置此武将牌时，你将剩余武将牌堆的两张牌扣置于游戏外，称为“魂”；你可以展示一张“魂”并将其置入剩余武将牌堆，视为使用了一张本回合内未以此法使用过的基本牌或普通锦囊牌。（若此牌需指定目标，则目标须为未确定势力的角色或野心家或与此“魂”势力相同的角色）",
 			"yigui_init":"役鬼",
@@ -7680,7 +7683,7 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 			baoling:'暴凌',
 			baoling_info:'主将技，锁定技，出牌阶段结束时，若你有副将，则你移除副将，然后加3点体力上限，回复3点体力，失去技能〖暴凌〗并获得〖崩坏〗',
 			gzzhiba:'射戟',
-			gzzhiba_info:'装备此牌，其他角色出牌阶段开始时，你可与其拼点。若你赢，视为你对其使用一张【决斗】；若你没赢，视为其对你使用一张【决斗】。',
+			gzzhiba_info:'装备此牌，其他角色出牌阶段开始前，你可与其拼点。若你赢，视为你对其使用一张【决斗】；若你没赢，视为其对你使用一张【决斗】。',
 			yingyang:'鹰扬',
 			yingyang_info:'主将技，当你的拼点牌亮出后，你可以令此牌的点数+3，至多为K，或点数-3，至少为1，然后双方各摸一张牌。',
 			hunshang:'魂殇',
