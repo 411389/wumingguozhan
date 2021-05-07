@@ -7799,12 +7799,12 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 			['club',9,'jiu'],
 			['club',10,'sha'],
 			['club',10,'bingliang'],
-			['club',11,'sha'],
+			['club',11,'tiesuo'],//sha
 			['club',11,'sha'],
 			['club',12,'jiedao'],
 			['club',12,'tiesuo'],
 			['club',13,'wuxie',null,['guo']],
-			['club',13,'tiesuo'],
+			['club',13,'jiedao'],//tiesuo
 
 			['diamond',1,'zhuge'],
 			['diamond',1,'zhuque'],
