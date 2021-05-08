@@ -4948,9 +4948,9 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 				filterCard:function(card){
 					return get.color(card)=='black';
 				},
-				viewAsFilter:function(player){
-					return player.countCards('h',{color:'black'})>0;
-				},
+				// viewAsFilter:function(player){
+				// 	return player.countCards('h',{color:'black'})>0;
+				// },
 				viewAs:{name:'wuxie'},
 				prompt:'将一张黑色手牌当无懈可击使用',
 				check:function(card){
