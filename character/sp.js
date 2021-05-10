@@ -10826,7 +10826,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 				audio:2,
 				trigger:{global:'phaseUseBegin'},
 				filter:function(event,player){
-					return (get.mode()!='guozhan'||event.player!=player)&&player.countCards('h')>0;
+					return (get.mode()!='guozhan'||event.player!=player)&&player.countCards('h')>0&&trigger.player.hp>0;
 				},
 				direct:true,
 				content:function(){
